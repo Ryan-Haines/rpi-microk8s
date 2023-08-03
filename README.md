@@ -15,7 +15,7 @@ Mac computer for flashing
 	check "set username and password"
 	use terminus
 
-2. `sudo apt update && sudo apt upgrade && sudo apt install zsh neovim`
+2. `sudo apt update && sudo apt upgrade && sudo apt install zsh neovim docker`
 then reboot `sudo reboot`
 
 3.
@@ -76,7 +76,7 @@ token is only good for a single attempt - run `microk8s add-node` again and for 
 
 5.
 now get to kubernetes dashboard:
-easy to bork up around this step, if necessary delete nodes with `kubectl delete node <name>` then `sudo microk8s reset` and restart from enabling services.
+easy to bork up around this step, if necessary delete nodes with `kubectl delete node <name>` then `sudo microk8s reset` and restart from enabling services & re-add worker nodes.
 
 expose the dashboard over nodeport to access the dashboard outside the cluster:
 
